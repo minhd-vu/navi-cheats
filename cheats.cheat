@@ -1,4 +1,4 @@
-% git, code
+% git-status, common
 
 # Run git status in all directories and only repos with changes
 for d in */; do
