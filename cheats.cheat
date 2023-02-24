@@ -1,6 +1,6 @@
 % git-status, common
 
-# Run git status in all directories and only repos with changes
+# Run git status in all directories and print repos with changes
 for d in */; do
   if !(git -C $d status | grep -q "nothing to commit, working tree clean");
   then
