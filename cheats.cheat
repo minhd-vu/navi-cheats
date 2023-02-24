@@ -1,0 +1,10 @@
+% git, code
+
+# Run git status in all directories and only repos with changes
+for d in */; do
+  if !(git -C $d status | grep -q "nothing to commit, working tree clean");
+  then
+    echo -e "\033[1m\033[1;35m$d\033[0m";
+    git -C $d status -s;
+  fi;
+done
